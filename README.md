@@ -11,7 +11,7 @@ a simple script to read the raw data format exported from VOTI Detection X-ray S
 ## Usage
 
 ``
-python3 ./read-voti.py filename.data
+python3 ./read-voti.py filename.voti
 ``
 
 ## Observations
