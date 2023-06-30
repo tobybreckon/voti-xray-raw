@@ -10,7 +10,6 @@ import mmap
 import numpy as np
 import os
 import sys
-import cv2 as cv
 import matplotlib.pyplot as plt
 
 ##########################################################################################################
