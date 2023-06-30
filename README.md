@@ -1,6 +1,6 @@
 # Read VOTI Detection Raw X-ray Data Format Files
 
-a simple script to read the raw data format exported from VOTI Detection X-ray Scanners
+a simple script to read the raw data format exported from VOTI Detection X-ray Scanners (.voti files)
 
 ## Data Format
 - filename is of the format: ``SERIAL-DATE-TIME-VIEW.voti`` (e.g.  ``001234-20230630-160512-0.voti``) 
@@ -10,9 +10,18 @@ a simple script to read the raw data format exported from VOTI Detection X-ray S
 
 ## Usage
 
+Tested using Python 3.11.
+
 ``
+python3 -m pip install -r requirements.txt
 python3 ./read-voti.py filename.voti
 ``
 
 ## Observations
-- data is uncorreected 64 x 10 samples from X-ray detector be 
+
+![VOTI Raw](output.png)
+
+- data is uncorrected 64 x 10 samples from X-ray detector (in x-axis across beam)
+- every 10th sample appears to be missing (unknown if this is specific issue with scanner tested or general)
+- data aquisation appears to start before X-ray beam is fully active and is still energising (i.e. first N image rows contain no data / gradient in X-ray intensity, N = 30 in examples tested - unknown if this is specific issue with scanner tested or general).
+- effective-Z data is not present or stored in this file format
