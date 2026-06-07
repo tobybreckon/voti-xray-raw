@@ -12,10 +12,10 @@ a simple script to read the raw data format exported from VOTI Detection X-ray S
 
 Tested using Python 3.11.
 
-``
+```
 python3 -m pip install -r requirements.txt
 python3 ./read-voti.py filename.voti
-``
+```
 
 ## Observations
 
